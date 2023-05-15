@@ -1,0 +1,52 @@
+%DIR  = $FSDIR
+
+OLE1 parham.xlsx sheet1
+
+VARIABLE %comp(12) %Results_names(40) %Results_mass(40) 
+
+%comp OLE1 read A2
+
+OPEN P.equi
+
+%2 = 1 to 3
+	%comp OLE1 read A%2
+
+	%1 = 1 TO 11
+		SET REACTANT %1 MASS %comp(%1)
+	%1 LOOP
+	SET REACTANT 12 MASS ?100
+	CALC
+	%Results_mass = $E_sg19$ $E_sg28$ $E_sg56$ $E_sg58$ $E_sg70$ $E_sg73$ $E_sg79$ $E_sg82$ $E_sg86$ $E_sg87$ $E_sg95$ $E_sg100$ $E_sg114$ $E_sg115$ $E_sg126$ $E_sg143$ $E_sg155$ $E_sg165$ $E_sg177$ $E_sg183$ $E_sg186$ $E_sg189$ $E_sg193$ $E_sg195$ $E_sg198$ $E_sg210$ $E_sg232$ $E_sg237$ $E_sg248$ $E_sg265$ $E_sg277$ $E_sg278$ $E_sg292$ $E_sg298$ $E_sg328$ $E_sg330$ $E_sg331$ $E_sg334$ $E_sg342$ $E_sg373$ 
+	%Results_mass OLE1 write M%2
+%2 LOOP
+
+//%Results_names = $E_sN19$ $E_sN28$ $E_sN56$ $E_sN58$ $E_sN70$ $E_sN73$ $E_sN79$ $E_sN82$ $E_sN86$ $E_sN87$ $E_sN95$ $E_sN100$ $E_sN114$ $E_sN115$ $E_sN126$ $E_sN143$ $E_sN155$ $E_sN165$ $E_sN177$ $E_sN183$ $E_sN186$ $E_sN189$ $E_sN193$ $E_sN195$ $E_sN198$ $E_sN210$ $E_sN232$ $E_sN237$ $E_sN248$ $E_sN265$ $E_sN277$ $E_sN278$ $E_sN292$ $E_sN298$ $E_sN328$ $E_sN330$ $E_sN331$ $E_sN334$ $E_sN342$ $E_sN373$ 
+
+//%Results_names OLE1 write L1
+
+OLE1 CLOSE SAVE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
