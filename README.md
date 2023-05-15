@@ -1,4 +1,4 @@
-# Optimization Algorithm
+# Materials Optimization Algorithm and Connecting to FactSage Software MACRO
 
 This repository contains code for an optimization algorithm that utilizes a genetic algorithm approach to optimize a material composition for desired mechanical properties. The algorithm evolves a population of material compositions over multiple generations, using a random forest regression model to evaluate their fitness.
 
