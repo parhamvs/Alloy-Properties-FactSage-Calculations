@@ -8,7 +8,7 @@ The optimization algorithm consists of the following main components:
 
 1. Data Preparation:
    - Definitions of different second phases main element in perioodic table (Alkline, Transition, Lanthanides, Post_transition, Metalloids).
-   - Data processing steps to aggregate composition data and calculate the sum of different secondphases and adding to the dataset.
+   - Data processing steps to aggregate composition data and calculate the sum of different second phases and adding to the dataset.
    - Splitting the data into input features and target variables.
 
 2. Model Training and Evaluation:
